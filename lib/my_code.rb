@@ -12,5 +12,5 @@ def reduce(source_array, starting_point = nil)
     total = source_array[0]
   end
   source_array.each{|element| total = yield(total, element)}
-  answer
+  total
 end
