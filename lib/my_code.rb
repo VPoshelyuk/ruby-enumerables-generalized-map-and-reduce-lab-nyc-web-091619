@@ -6,6 +6,6 @@ def map(source_array)
 end
 
 def reduce(source_array, starting_point = 0)
-  source_array.each{|element| total = yield(total, element)}
-  total
+  source_array.each{|element| total = yield(starting_point, element)}
+  starting_point
 end
