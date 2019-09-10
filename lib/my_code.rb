@@ -9,8 +9,8 @@ def reduce(source_array, starting_point = nil)
   if starting_point
     total = starting_point
   else
-    total = source_array[0]
+    total = 0
   end
-  source_array.each{|element| answer = yield(total, element)}
+  source_array.each{|element| total = yield(total, element)}
   total
 end
