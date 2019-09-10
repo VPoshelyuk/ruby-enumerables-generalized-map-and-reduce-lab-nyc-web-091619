@@ -11,7 +11,7 @@ def reduce(source_array, starting_point = nil)
     source_array.each{|element| total = yield(total, element)}
   else
     total = source_array[0]
-    source_array.each{|element| total = yield(total, element)}
+    source_array.drop(1).each{|element| total = yield(total, element)}
   end
   total
 end
